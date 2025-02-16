@@ -1,0 +1,114 @@
+/* Base styles for dark mode with hacky aesthetic */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: monospace;
+    line-height: 1.6;
+  }
+  
+  a {
+    color: #ff0066;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Header section with profile picture and welcome text */
+  .header {
+    background-color: #1a1a1a;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border: 2px solid #e0e0e0;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px #ff0066;
+  }
+  
+  .header p {
+    margin: 5px 0 0;
+    font-size: 1em;
+  }
+  
+  /* Navigation bar */
+  .nav {
+    text-align: center;
+    background-color: #1a1a1a;
+    padding: 10px;
+  }
+  
+  .nav a {
+    margin: 0 15px;
+    font-size: 1.1em;
+  }
+  
+  /* Layout container for side image and main content */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .side-image, .content {
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  
+  /* Side image section */
+  .side-image {
+    flex: 1 1 250px;
+    max-width: 300px;
+  }
+  
+  .side-image img {
+    width: 100%;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+  }
+  
+  /* Content section for Experience, Education, Interests */
+  .content {
+    flex: 3 1 500px;
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  section h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    text-shadow: 1px 1px 2px #ff0066;
+  }
+  
+  section p {
+    margin-bottom: 15px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    .side-image, .content {
+      max-width: 100%;
+    }
+  }
+  
