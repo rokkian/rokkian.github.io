@@ -134,7 +134,7 @@
         <h2>Experience 👨🏻‍🏭</h2>
         <ul>
           <li class="role">
-            <h3> Cloud & Data Engineer <em> - <a href="https://datwave.ai/">Datwave</a> (June 2024-Ongoing)</em> </h3>
+            <h3> Cloud & Data Engineer <em> - <a href="https://datwave.ai/">Datwave</a> <span id="job-duration">(June 2024-Ongoing)</span></em> </h3>
             <p>
               I am working as a Cloud & Data Engineer at Datwave, a company that provides data solutions and AI services
               to its clients.
@@ -225,8 +225,8 @@
         <h2>Volunteering 🦸🏻‍♂️</h2>
         <ul>
           <li>
-            <h3> Organizer <em> - <a href="https://gdg.community.dev/gdg-cloud-milano/">GDG Cloud Milano</a> (November
-                2024-Ongoing)</em> </h3>
+            <h3> Organizer <em> - <a href="https://gdg.community.dev/gdg-cloud-milano/">GDG Cloud Milano</a> <span id="gdg-duration">(November
+                2024-Ongoing)</span></em> </h3>
             <p>I am an organizer for the events of <i>GDG Cloud Milano</i> community. This allowed me to partecipate in
               various GCP events in multiple countries. Being part of this community helps me keeping up with Google
               Cloud news and to get to know peers in the industry.</p>
@@ -281,6 +281,31 @@
 
     </div>
   </div>
+<script>
+    function calculateJobDuration(elementId, startDateStr, begin) {
+      const startDate = new Date(startDateStr);
+      const currentDate = new Date();
+
+      let years = currentDate.getFullYear() - startDate.getFullYear();
+      let months = currentDate.getMonth() - startDate.getMonth();
+
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+
+      let durationString = `(${begin} ~${years} year${years !== 1 ? 's' : ''}`;
+      if (months > 0) {
+        durationString += ` ${months} month${months !== 1 ? 's' : ''}`;
+      }
+      durationString += ')';
+
+      document.getElementById(elementId).textContent = durationString;
+    }
+
+    calculateJobDuration('job-duration', 'June 1, 2024', 'June 2024-Ongoing,');
+    calculateJobDuration('gdg-duration', 'November 1, 2024', 'November 2024-Ongoing,');
+  </script>
 </body>
 
 </html>
